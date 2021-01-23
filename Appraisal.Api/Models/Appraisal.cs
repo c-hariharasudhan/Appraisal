@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Appraisal.Models
+namespace Appraisal.Api.Models
 {
     public partial class Appraisal
     {

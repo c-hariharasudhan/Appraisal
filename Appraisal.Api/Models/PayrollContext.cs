@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace Appraisal.Models
+namespace Appraisal.Api.Models
 {
     public partial class PayrollContext : DbContext
     {

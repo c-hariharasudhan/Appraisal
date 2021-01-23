@@ -3,18 +3,19 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Appraisal.Models
+namespace Appraisal.Api.Models
 {
-    public partial class Grade
+    public partial class Rating
     {
-        public Grade()
+        public Rating()
         {
             Appraisals = new HashSet<Appraisal>();
         }
 
         public int Id { get; set; }
-        public string GradeName { get; set; }
+        public string RatingValue { get; set; }
         public int DepartmentId { get; set; }
+        public int Rank { get; set; }
         public bool? Active { get; set; }
 
         public virtual Department Department { get; set; }

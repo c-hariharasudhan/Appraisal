@@ -1,6 +1,6 @@
 using System;
 
-namespace Appraisal
+namespace Appraisal.Api
 {
     public class WeatherForecast
     {

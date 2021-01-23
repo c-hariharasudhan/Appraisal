@@ -1,13 +1,10 @@
-﻿using Appraisal.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Appraisal.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Appraisal.Controllers
+namespace Appraisal.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
