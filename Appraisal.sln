@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appraisal", "Appraisal.Api\Appraisal.Api.csproj", "{2B6A23C7-2793-4DA3-87CE-47A5771FB3B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appraisal.Api", "Appraisal.Api\Appraisal.Api.csproj", "{2B6A23C7-2793-4DA3-87CE-47A5771FB3B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appraisal.Api.DataAccess", "Appraisal.Api.DataAccess\Appraisal.Api.DataAccess.csproj", "{1F36F04F-5BE0-465B-9178-EF519BDC4525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appraisal.Api.DataContract", "Appraisal.Api.DataContract\Appraisal.Api.DataContract.csproj", "{E334C8E2-9BA6-417A-8EB9-43D2BF138456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2B6A23C7-2793-4DA3-87CE-47A5771FB3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B6A23C7-2793-4DA3-87CE-47A5771FB3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B6A23C7-2793-4DA3-87CE-47A5771FB3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F36F04F-5BE0-465B-9178-EF519BDC4525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F36F04F-5BE0-465B-9178-EF519BDC4525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F36F04F-5BE0-465B-9178-EF519BDC4525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F36F04F-5BE0-465B-9178-EF519BDC4525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E334C8E2-9BA6-417A-8EB9-43D2BF138456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E334C8E2-9BA6-417A-8EB9-43D2BF138456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E334C8E2-9BA6-417A-8EB9-43D2BF138456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E334C8E2-9BA6-417A-8EB9-43D2BF138456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

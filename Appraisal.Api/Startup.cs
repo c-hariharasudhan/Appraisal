@@ -1,3 +1,7 @@
+using Appraisal.Api.DataAccess;
+using Appraisal.Api.DataAccess.Repositories;
+using Appraisal.Api.DataContract;
+using Appraisal.Api.DataContract.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +31,11 @@ namespace Appraisal.Api
         {
             //services.AddControllers();
             services.AddMvc();
-            services.AddDbContext<Models.PayrollContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<IGradeRepository, GradeRepository>();
+            services.AddTransient<IRatingRepository, RatingRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddDbContext<PayrollContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSwaggerGen(options => options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Employee Payroll" }));
         }
 

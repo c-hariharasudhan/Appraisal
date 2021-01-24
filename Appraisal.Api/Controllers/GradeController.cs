@@ -1,8 +1,5 @@
-﻿using Appraisal.Api.Models;
+﻿using Appraisal.Api.DataContract;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Appraisal.Api.Controllers
 {
@@ -10,17 +7,17 @@ namespace Appraisal.Api.Controllers
     [ApiController]
     public class GradeController : ControllerBase
     {
-        private readonly PayrollContext _payrollContext;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public GradeController(PayrollContext payrollContext)
+        public GradeController(IUnitOfWork unitOfWork)
         {
-            _payrollContext = payrollContext;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet("{departmentId}")]
-        public async Task<IActionResult> Get(int departmentId) 
+        public IActionResult Get(int departmentId) 
         {
-            var grades = await _payrollContext.Grades.Where(g => g.DepartmentId == departmentId).ToListAsync();
+            var grades =  _unitOfWork.Grades.GetByDepartment(departmentId);
             return Ok(grades);
         }
     }
